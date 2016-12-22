@@ -7,11 +7,12 @@ RSpec.describe Doctor, type: :model do
     let(:patient2) { Patient.new }
 
     before do
-      doctor.patients + [patient1, patient2]
+      doctor.patients = [patient1, patient2]
     end
 
     it "has many patients" do
       expect(doctor.patients.size).to eq 2
+      expect(doctor.patients.first).to eq patient1
     end
 
   end
