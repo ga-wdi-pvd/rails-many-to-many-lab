@@ -8,6 +8,7 @@
        <li><%= appt.date %></li>
        <li><%=appt.doctor.name %></li>
       <li><%= appt.patient.name %></li>
+      <li><%= link_to "Show", appointment_path(appt) %></li>
     </ul>
   <% end %>
 </ol>

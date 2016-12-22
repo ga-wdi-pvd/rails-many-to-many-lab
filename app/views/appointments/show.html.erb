@@ -1,2 +1,15 @@
 <h1>Appointments#show</h1>
-<p>Find me in app/views/appointments/show.html.erb</p>
+<p>
+<ul>
+   <li>
+   
+    <%= @appointment.date %>
+   </li>
+   <li><%= @appointment.doctor.name %></li>
+   <li><%= @appointment.patient.name %></li>
+   <li><%= link_to "Edit", edit_appointment_path(@appointment) %></li>
+   <li><%= button_to "Delete", appointment_path(@appointment), method: :delete, class: 'delete2', "data-redirect_to": "/appointments" %></li>
+</ul>
+
+</p>
+<%= link_to "Back", appointments_path %>
