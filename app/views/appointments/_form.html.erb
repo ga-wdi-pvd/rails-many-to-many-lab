@@ -14,5 +14,7 @@
 <%= f.select :patient_id, Patient.all.map{ |d| [d.name, d.id]} %>
 <br />
 <br />
+<%= f.label :date %>
+<%= f.datetime_select :date %>
   <%= f.submit %>
 <% end %>

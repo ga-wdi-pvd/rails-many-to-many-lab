@@ -1,4 +1,13 @@
-<h1>Appointments#index</h1>
+<h1>All Appointments</h1>
 <p>
 <%=link_to "New Appointment", new_appointment_path%>
 </p>
+<ol>
+  <% @appointments.each do |appt| %>
+    <ul>
+       <li><%= appt.date %></li>
+       <li><%=appt.doctor.name %></li>
+      <li><%= appt.patient.name %></li>
+    </ul>
+  <% end %>
+</ol>
