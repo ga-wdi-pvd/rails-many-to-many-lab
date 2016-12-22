@@ -1,7 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  time: 2016-11-09 15:02:13
+  date: 2016-12-22 16:30:36
+  doctor: one
+  patient: one
 
 two:
-  time: 2016-11-09 15:02:13
+  date: 2016-12-22 16:30:36
+  doctor: two
+  patient: two
