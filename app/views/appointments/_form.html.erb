@@ -1,0 +1,18 @@
+<%= form_for @appointment do |f| %>
+  <% if @appointment.errors.any? %>
+    <ul>
+      <% @appointment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <%= f.label :doctor_id, "Select the Doctor" %>
+  <%= f.select :doctor_id, Doctor.all.map{ |d| [d.name, d.id] } %>
+  <br />
+  <br />
+  <%= f.label :patient_id, "Select the Patient" %>
+<%= f.select :patient_id, Patient.all.map{ |d| [d.name, d.id]} %>
+<br />
+<br />
+  <%= f.submit %>
+<% end %>
