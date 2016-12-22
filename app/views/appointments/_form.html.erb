@@ -1,0 +1,12 @@
+<%= form_for(@appointment) do |f| %>
+  <%= f.select :doctor_id, Doctor.all.map { |doc| [doc.name, doc.id] } %>
+  <br />
+    <br />
+  <%= f.select :patient_id, Patient.all.map { |doc| [doc.name, doc.id] } %>
+  <br />
+  <br />
+  <%= f.datetime_select :date %>
+  <br />
+  <br />
+  <%= f.submit %>
+<% end %>

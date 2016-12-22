@@ -1,0 +1,16 @@
+<h1>Appointments#index</h1>
+<p>Find me in app/views/appointments/index.html.erb</p>
+
+<ul>
+  <% @appointments.each do |appt|%>
+    <li><%= appt.doctor.name %></li>
+    <li><%= appt.patient.name  %></li>
+    <li><%= appt.date %></li>
+    <li><%= link_to "Show", appt %></li>
+
+  <%= link_to "Delete", appointment_path(appt),
+  method: :delete, data: {confirm: "Delete it?"}  %>
+  </li>
+
+  <% end %>
+</ul>
