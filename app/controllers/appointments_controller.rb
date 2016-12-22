@@ -9,6 +9,9 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.new
   end
 
+def edit
+end
+
   def create
     @appointment = Appointment.new(appointment_params)
 
