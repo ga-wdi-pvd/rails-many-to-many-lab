@@ -1,0 +1,6 @@
+valid:
+  date: 2022-12-22 19:00:00 UTC
+  patient: patients(:fox)
+  doctor: doctors(:scully)
+
+
